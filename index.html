@@ -11,21 +11,15 @@
     body {
         background: #b0c9d3;
         font-family: Arial, Helvetica, sans-serif;
-        color: red;   
+        color: red;
         text-align: center;
-    }
-
-    #container {
-        padding-top: 30px;
-    }
-
-    form {
-        margin-top: 50px;
+        display: flex;
+        justify-content: center;
     }
 
     ul {
         list-style: none;
-        color: #333;
+        padding: 0;
     }
 </style>
 
@@ -34,12 +28,13 @@
     <div id="container">
         <h1 id="header" class="test">To Do List</h1>
         <p>Enter Item to Add to Your List</p>
-        <p id="error"></p>
+        <h3 id="error-message"></h3>
         <form>
             <input type="text" id="input">
-            <button href="#" class="btn">Add Item to List</button>
+            <button type="submit" class="btn">Add Item to List</button>
         </form>
-        <ul id="items-list"></ul>
+
+        <ul id="list-items"></ul>
     </div>
 
 
