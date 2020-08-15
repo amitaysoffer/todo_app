@@ -7,54 +7,9 @@ const errorHeader = document.querySelector('h3');
 let errorVerify = true
 
 // Event listeners
-// button.addEventListener('click', addItem);
+button.addEventListener('click', addItem);
 document.body.addEventListener('click', deleteItem)
 document.body.addEventListener('change', checkboxFunction)
-document.body.addEventListener('click', saveLocal)
-
-function saveLocal(e) {
-    console.log('hello')
-    console.log(document.querySelector('input').value);
-    console.log(input)
-    console.log(input.value)
-    e.preventDefault();
-}
-// Local Storage
-// button.addEventListener('click', function (e) {
-
-
-//     localStorage.setItem('name', input.value);
-// // localStorage.clear();
-
-
-// })
-
-
-
-
-function checkboxFunction(e) {
-    if (e.target.classList.contains('checkbox')) {
-        if (e.target.checked == true) {
-            e.target.parentElement.style.textDecoration = "line-through";
-
-            const btn = document.createElement('button');
-            btn.className = 'delete-item btn'
-            btn.innerText = 'Delete'
-            e.target.parentElement.appendChild(btn);
-        } else {
-            e.target.nextSibling.remove();
-        }
-    }
-}
-
-// Delete item
-function deleteItem(e) {
-    if (e.target.classList.contains('delete-item')) {
-        e.target.parentElement.remove();
-    }
-}
-
-
 
 // Add item to list
 function addItem(e) {
@@ -67,11 +22,9 @@ function addItem(e) {
 
         checkbox.setAttribute("type", "checkbox");
         checkbox.className = 'checkbox'
-        // checkbox.style.float = 'left'
 
         li.appendChild(checkbox);
         itemsList.appendChild(li);
-
 
         input.value = ''
 
@@ -89,4 +42,33 @@ function addItem(e) {
 
     e.preventDefault()
 };
+
+// Delete item
+function deleteItem(e) {
+    if (e.target.classList.contains('delete-item')) {
+        console.log('delete item')
+        e.target.parentElement.remove();
+    }
+}
+
+
+function checkboxFunction(e) {
+    if (e.target.classList.contains('checkbox')) {
+        if (e.target.checked == true) {
+            console.log('check');
+            e.target.parentElement.style.textDecoration = "line-through";
+
+            const btn = document.createElement('button');
+            btn.className = 'delete-item btn'
+            btn.innerText = 'Delete'
+            // btn.style.float = 'right'
+            console.log(e.target.parentElement)
+            e.target.parentElement.appendChild(btn);
+        } else {
+
+            console.log(e.target.nextSibling)
+            e.target.nextSibling.remove();
+        }
+    }
+}
 
