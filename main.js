@@ -37,7 +37,8 @@ function addItem(e) {
         }
 
         errorVerify = true
-
+    
+        
     } else if (errorVerify) {
         errorHeader.innerText = 'Cannot Add a Blank Item to the List'
         errorVerify = false
