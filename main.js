@@ -8,26 +8,24 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add new item event listener
-let errorVerify = true
 const form = document.querySelector('form')
 form.addEventListener('submit', function (e) {
     const itemInput = document.getElementById('input')
     const errorHeader = document.querySelector('h3');
 
+    let errorVerify = true
+
     if (!itemInput.value == '') {
         renderItem(itemInput.value)
 
         addItemToLocalStorage(itemInput.value)
-
-        itemInput.value = ''
-
         // remove error header if exists
         if (!errorVerify) {
             document.querySelector('h3').innerText = '';
         }
 
-        errorVerify = true
-
+        let errorVerify = true
+        itemInput.value = ''
     } else if (errorVerify) {
         errorHeader.innerText = 'Cannot Add a Blank Item to the List'
         errorVerify = false
@@ -101,5 +99,5 @@ function removeItemFromLS(item) {
     });
 
     localStorage.setItem('items', JSON.stringify(filteredItems))
-}
+};
 
