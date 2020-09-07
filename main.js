@@ -88,6 +88,7 @@ function addItemToLocalStorage(item) {
     localStorage.setItem('items', JSON.stringify(items));
 };
 
+
 function removeItemFromLS(item) {
     const items = JSON.parse(localStorage.getItem('items')) || [];
 
