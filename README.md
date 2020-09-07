@@ -1,10 +1,10 @@
-# Vanilla Javascript Standard Clock App
+# Vanilla Javascript ToDo List
 
 *A simple ToDo list to increase efficiency. Written in JS, HTML, CSS.*
 
-Click [HERE](https://amitaysoffer.github.io/todo_app/) to start organise your day.
+Click [HERE](https://amitaysoffer.github.io/todo_app/) to start organising your day.
 
-![Screenshot 2020-09-06 at 12 23 34](https://user-images.githubusercontent.com/31068256/92324662-d249a580-f03b-11ea-95d4-a48025cd1150.png)
+![Screenshot 2020-09-06 at 16 29 53](https://user-images.githubusercontent.com/31068256/92369400-e26f8c80-f0f0-11ea-8c69-c83e43894d18.png)
 
 
 ## Summary
