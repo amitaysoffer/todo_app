@@ -41,7 +41,7 @@ document.body.addEventListener('click', function (e) {
 
         removeItemFromLS(e.target.parentElement)
     }
-})
+});
 
 // Check box handler event listener
 document.body.addEventListener('change', function (e) {
@@ -59,7 +59,7 @@ document.body.addEventListener('change', function (e) {
             e.target.parentElement.style.textDecoration = "none";
         }
     }
-})
+});
 
 function renderItem(itemText) {
     const itemsList = document.getElementById('list-items')
