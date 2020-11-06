@@ -48,10 +48,9 @@ document.body.addEventListener('change', function (e) {
     if (e.target.classList.contains('checkbox')) {
         if (e.target.checked == true) {
             e.target.parentElement.style.textDecoration = "line-through";
-
             const btn = document.createElement('button');
             btn.className = 'delete-item btn'
-            btn.innerText = 'Delete'
+            btn.innerText = 'Delet'
 
             e.target.parentElement.appendChild(btn);
         } else {
