@@ -50,7 +50,7 @@ document.body.addEventListener('change', function (e) {
             e.target.parentElement.style.textDecoration = "line-through";
             const btn = document.createElement('button');
             btn.className = 'delete-item btn'
-            btn.innerText = 'Delet'
+            btn.innerText = 'Delete'
 
             e.target.parentElement.appendChild(btn);
         } else {
